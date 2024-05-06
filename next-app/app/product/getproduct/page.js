@@ -13,14 +13,14 @@ export default async function GetProduct() {
 
 
     return (
-        <>
+        <arguments className="flex flex-wrap gap-5  justify-center items-center  ">
             {productss.map((d) => (
-                <div className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+                <div className="flex  w-[20rem] rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
                     <a href="#!">
-                        {d.img && <img className="rounded-t-lg" src={d.img} alt="" />} {/* Check if img is available before rendering */}
+                        {d.img && <img className="rounded-t-lg m-2 h-[10rem] w-[10rem]" src={d.img} alt="" />} {/* Check if img is available before rendering */}
                     </a>
                     <div className="p-6">
-                        <Link href={`../../product/${d.id}`} className="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
+                        <Link href={`../../product/${d.product_id}`} className="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
                             {d.name}
                         </Link>
                         <p className="mb-4 text-base text-neutral-600 dark:text-neutral-200">
@@ -35,6 +35,6 @@ export default async function GetProduct() {
                     </div>
                 </div>
             ))}
-        </>
+        </arguments>
     );
 }
